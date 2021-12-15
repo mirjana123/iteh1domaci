@@ -13,7 +13,7 @@
 
   <style type = "text/css" > 
     body{
-      background-image:url(50.jpg);
+      background-image:url(47.jpg);
       background-size: cover;
       background-attachment: fixed;
     }
