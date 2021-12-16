@@ -28,12 +28,13 @@ $rows = $model->search();
 
     $i = 1;
         if (!empty($rows)) {
+            //vrati sve redove iz baze
             foreach ($rows as $row) {
-                $r = $model->getRow($row['id']);?>
+               // $r = $model->getRow($row['id']);?>
 
                 <tr>
                     <td><?php echo $i++; ?></td>
-                    <td><?php echo $r['title']; ?></td>
+                    <td><?php echo $row['title']; ?></td>
                     <td><?php echo $row['description']; ?></td>
                     <td><?php echo $row['designer'];?></td>
                     <td >

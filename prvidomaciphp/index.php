@@ -68,15 +68,13 @@
             <input type="text" class="form-control mb-2" id="search" placeholder="By name">
     </div>
       <div class="col-md-8 mx-auto">
-     
-          <div id="show"></div>
-          <div id="fetch"></div>
-         
+         <div id="show"></div>
+          <div id="fetch">
       </div>
     </div>
 </div>
 
-  <!-- Modal -->
+  <!-- Modal 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -95,6 +93,7 @@
       </div>
     </div>
   </div>
+-->
 
   <!--  EDIT Modal -->
   <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -156,12 +155,13 @@
           }
         });  
       }
+
       fetch();
 
       // DELETE
 
       $(document).on("click","#delete", function(e){
-        e.preventDefault();
+        e.preventDefault(); // da ne moze nista da se klinke sem prozora
         if(window.confirm("Do you want to delete record?")){
           var del_id = $(this).attr("value"); 
           
@@ -174,6 +174,8 @@
             success:function(data){
               fetch();
               $("#show").html(data);
+             
+                            
             }
         });
         }
@@ -221,8 +223,9 @@
           update:update
         },
         success: function(data){
-          fetch();
-          $("#show").html(data);
+         fetch();
+         $("#show").html(data);
+        //
         }
       });
     });
@@ -248,7 +251,7 @@
 
     // SEARCH
     $(document).ready(function(){
-    $("#search").on("keyup", function() {
+    $("#search").on("keyup", function() {    // keyup - tastatura
       let value = $(this).val().toLowerCase();
       console.log(value);
       

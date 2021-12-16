@@ -89,7 +89,7 @@
             $data = $stmt->fetchAll();
             return $data;    
         }
-        
+          
         public function getRow($title_id){
             $data= null;
 
